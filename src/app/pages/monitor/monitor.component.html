@@ -1,0 +1,19 @@
+<nz-carousel nzAutoPlay style="width: 1000px; height: 400px;">
+    <div nz-carousel-content  *ngFor="let index of array;index as i">
+      <h1 style="color: tomato;">{{i}}:{{ index }}</h1>
+      <img src="https://daotaosathachag.com/wp-content/uploads/2018/07/hinh-anh-de-thuong-9.jpg" class="img-circle" alt="Cinque Terre" width="304" height="236"> 
+    </div>
+  </nz-carousel>
+
+  <div>
+    <ng-container *ngFor="let position of listOfPosition">
+      <button nz-button nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="position">{{ position }}</button>
+      <nz-dropdown-menu #menu="nzDropdownMenu">
+        <ul nz-menu>
+          <li nz-menu-item>1st menu item length</li>
+          <li nz-menu-item>2nd menu item length</li>
+          <li nz-menu-item>3rd menu item length</li>
+        </ul>
+      </nz-dropdown-menu>
+    </ng-container>
+  </div>
